@@ -43,16 +43,16 @@
 
 ```bash
 # 装到当前项目，写入 ./.codebuddy/skills/，可随项目提交给协作者
-npx skills add <你的账号>/<仓库名>
+npx skills add vax521/problem-analysis-skills
 
 # 装到用户目录，所有项目都可用
-npx skills add <你的账号>/<仓库名> -g
+npx skills add vax521/problem-analysis-skills -g
 
 # 跳过交互，只装给 CodeBuddy
-npx skills add <你的账号>/<仓库名> -a codebuddy -y
+npx skills add vax521/problem-analysis-skills -a codebuddy -y
 
 # 先列出仓库里有哪些技能，不安装
-npx skills add <你的账号>/<仓库名> --list
+npx skills add vax521/problem-analysis-skills --list
 ```
 
 CLI 会自动探测本机已安装的 agent 并让你选择目标；默认用符号链接安装（改 `--copy`
@@ -69,22 +69,22 @@ CLI 会自动探测本机已安装的 agent 并让你选择目标；默认用符
 - Windows：`C:\Users\<你的用户名>\.codebuddy\skills\`
 
 ```bash
-git clone https://github.com/<你的账号>/<仓库名>.git
-cp -r <仓库名>/skills/* ~/.codebuddy/skills/
+git clone https://github.com/vax521/problem-analysis-skills.git
+cp -r problem-analysis-skills/skills/* ~/.codebuddy/skills/
 ```
 
 Windows PowerShell：
 
 ```powershell
-git clone https://github.com/<你的账号>/<仓库名>.git
-Copy-Item .\<仓库名>\skills\* "$env:USERPROFILE\.codebuddy\skills\" -Recurse
+git clone https://github.com/vax521/problem-analysis-skills.git
+Copy-Item .\problem-analysis-skills\skills\* "$env:USERPROFILE\.codebuddy\skills\" -Recurse
 ```
 
 装到项目级则复制到该项目的 `.codebuddy/skills/` 下。
 
 ### 方式三：下载 zip 包
 
-从 [Releases](https://github.com/<你的账号>/<仓库名>/releases) 下载对应技能的 zip，
+从 [Releases](https://github.com/vax521/problem-analysis-skills/releases) 下载对应技能的 zip，
 解压到用户技能目录。zip 内部顶层目录即技能名，不要改动层级。
 
 > 通过 `npx skills add` 安装后，项目根目录会生成 `skills-lock.json` 记录版本，建议一并提交。
@@ -182,9 +182,9 @@ per skill.
 Install with the skills CLI — `skills/` is its standard container layout:
 
 ```bash
-npx skills add <your-account>/<repo>          # project scope
-npx skills add <your-account>/<repo> -g       # user scope
-npx skills add <your-account>/<repo> --list   # list without installing
+npx skills add vax521/problem-analysis-skills          # project scope
+npx skills add vax521/problem-analysis-skills -g       # user scope
+npx skills add vax521/problem-analysis-skills --list   # list without installing
 ```
 
 Or copy the folders manually into `~/.codebuddy/skills/` (user scope) or
