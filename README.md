@@ -1,5 +1,12 @@
 # 问题分析框架 Skills
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/skills-7-orange.svg)](#技能清单)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-3776AB.svg?logo=python&logoColor=white)](#开发)
+[![Stars](https://img.shields.io/github/stars/vax521/problem-analysis-skills.svg)](https://github.com/vax521/problem-analysis-skills/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/vax521/problem-analysis-skills.svg)](https://github.com/vax521/problem-analysis-skills/commits/main)
+[![validate-skills](https://github.com/vax521/problem-analysis-skills/actions/workflows/validate-skills.yml/badge.svg?branch=main)](https://github.com/vax521/problem-analysis-skills/actions/workflows/validate-skills.yml)
+
 把书里的问题分析方法论，编译成 AI Agent 可以直接调用的技能包。
 
 [English](#english) · [许可证](#许可证) · [贡献指南](CONTRIBUTING.md)
