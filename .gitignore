@@ -1,0 +1,15 @@
+# 打包产物由 scripts/build_dist.py 生成，通过 GitHub Releases 分发，不入库
+dist/
+
+# Python 运行产物
+__pycache__/
+*.py[cod]
+
+# IDE 本地状态不入库，技能本体在根目录 skills/
+.codebuddy/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

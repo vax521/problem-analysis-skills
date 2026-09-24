@@ -1,0 +1,30 @@
+name: validate-skills
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 校验技能 frontmatter 与目录结构
+        run: python scripts/build_dist.py --check
+
+      - name: 冒烟测试框架卡工具
+        run: |
+          python skills/problem-analysis-framework/scripts/framework_card_tool.py \
+            scaffold --card-name problem_reframing --output /tmp/problem_reframing.yaml
+          test -s /tmp/problem_reframing.yaml
+          python skills/problem-analysis-framework/scripts/framework_card_tool.py \
+            render --card-path /tmp/problem_reframing.yaml
+
+      - name: 试打包，确认产物结构正确
+        run: python scripts/build_dist.py
